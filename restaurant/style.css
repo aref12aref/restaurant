@@ -1,0 +1,118 @@
+*{
+    color: white;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#111, #222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+body::after{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background: rgb(110, 33, 33);
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+    z-index: -1;
+}
+
+header{
+    background: rgba(255, 255, 255, 0.1);
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#main_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 1%;
+}
+#main_nav h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#main_nav ul li{
+    display: inline-block;
+    margin: 0px 6px;
+    list-style-type: none;
+}
+#main_nav ul li a{
+    text-decoration-line: none;
+}
+#main_nav ul li a:hover{
+    color: brown;
+    font-size: larger;
+}
+
+main{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 60%;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+#content :where(h1,p){
+    letter-spacing: 1px;
+    margin: 5px 0px;
+}
+
+#image{
+    width: 40%;
+}
+#image img{
+    width: 300px;
+}
+
+@media (min-width:900px) and (max-width:1100px){
+    #image img{
+        width: 250px;
+    }
+}
+
+@media (max-width:900px){
+    body::after{
+        clip-path: circle(40% at bottom);
+    }
+    #content , #image{
+        width: 100%;
+        margin: 50px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #main_nav{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:700px){
+    #image img{
+        width: 200px;
+    }
+}

@@ -1,0 +1,41 @@
+*{
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(circle 400px at center, black,#003);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+}
+label,legend{
+    color: white;
+    font-size: large;
+}
+form{
+    width: 80%;
+    background: #0000888c;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+form input{
+    padding: 5px 10px;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+@media (min-width: 880px) {
+    form{
+        width: 60%;
+    }
+}
